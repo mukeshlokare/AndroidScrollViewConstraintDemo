@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.constraintlayout.scrollview.scrollviewconstraintdemo.MainActivity">
+
+    <!--<include
+        android:id="@+id/toolbar"
+        layout="@layout/custom_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <ScrollView
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:layout_marginTop="0dp"
+        android:background="@color/colorPrimaryWhite"
+        app:layout_constraintTop_toTopOf="parent">
+        <!--//layout_constraintTop_toBottomOf = "@+id/toolbar"-->
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryWhite"
+            >
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:background="@color/colorSundown"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="0dp"
+                app:layout_constraintHorizontal_bias="0.0">
+
+            </RelativeLayout>
+
+            <ImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/imageView3"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:padding="2dp"
+                android:layout_marginTop="75dp"
+                android:src="@drawable/err_placeholder"
+                app:layout_constraintLeft_toRightOf="@+id/relativeLayout"
+                app:layout_constraintRight_toLeftOf="@+id/relativeLayout"
+                app:layout_constraintTop_toTopOf="@+id/relativeLayout" />
+            <!--app:civ_border_color="@color/colorAccent"
+            app:civ_border_width="2dp"-->
+
+
+            <TextView
+                android:id="@+id/txt_drivername_textview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="25dp"
+                android:text="Mukesh Lokare"
+                android:textAlignment="center"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3"
+                android:textSize="@dimen/txt_driver_profile_fontsize"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryBlack"/>
+
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout2"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="11dp"
+                android:background="@drawable/rounded_border_rect"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_drivername_textview"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="80dp">
+
+                <TextView
+                    android:id="@+id/txt_driver_avilabilitystatus_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Available"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@+id/mySwitch"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:textSize="@dimen/txt_driver_profile_abilable_fontsize"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorDarkPink"/>
+
+                <Switch
+                    android:id="@+id/mySwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout3"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="25dp"
+                android:background="@color/colorPrimaryDarkGray"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relativeLayout2">
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relativeLayout3"
+                app:srcCompat="@drawable/drivericon" />
+
+            <TextView
+                android:id="@+id/txt_driverid_textview"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="0dp"
+                android:gravity="center_vertical|left"
+                android:text="ID - 11"
+                android:textColor="@color/colorPrimaryBlack"
+                android:textSize="@dimen/txt_driver_profile_fontsize_all"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toRightOf="@+id/imageView2"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView2"
+                app:layout_constraintVertical_bias="0.4" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout4"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimaryDarkGray"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2"></RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relativeLayout4"
+                app:srcCompat="@drawable/email" />
+
+            <TextView
+                android:id="@+id/txt_driver_emailid_textview"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:gravity="center_vertical|left"
+                android:text="mukesh.lokare1@gmail.com"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+                app:layout_constraintLeft_toRightOf="@+id/imageView4"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView4"
+                android:textSize="@dimen/txt_driver_profile_fontsize_all"
+                android:textColor="@color/colorPrimaryBlack"/>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout5"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimaryDarkGray"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView4"
+                app:layout_constraintHorizontal_bias="0.0">
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relativeLayout5"
+                app:srcCompat="@drawable/mobile"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/txt_driver_mobile_textview"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="0dp"
+                android:gravity="center_vertical|left"
+                android:text="+919767560214"
+                app:layout_constraintLeft_toRightOf="@+id/imageView5"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView5"
+                android:textSize="@dimen/txt_driver_profile_fontsize_all"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                android:layout_marginBottom="0dp"
+                app:layout_constraintVertical_bias="0.333"
+                android:textColor="@color/colorPrimaryBlack"/>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout6"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimaryDarkGray"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView5">
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relativeLayout6"
+                app:srcCompat="@drawable/restauranticon"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/txt_driver_restaurant_textview"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical|left"
+                android:text="Al nehamn restaurants"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+                app:layout_constraintLeft_toRightOf="@+id/imageView6"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView6"
+                android:textSize="@dimen/txt_driver_profile_fontsize_all"
+                android:textColor="@color/colorPrimaryBlack"/>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimaryDarkGray"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView6"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="25dp">
+
+            </RelativeLayout>
+
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

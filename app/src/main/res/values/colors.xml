@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#f15075</color>
+    <color name="colorPrimaryWhite">#FFFFFF</color>
+    <color name="colorPrimaryBlack">#000000</color>
+    <color name="colorPrimaryDarkGray">#a9a9a9</color>
+    <color name="colorPrimaryGreen">#008000	</color>
+
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorCustomGreen">#28B3BF</color>
+    <color name="colorCustomWhiteGray">#EFEFEF</color>
+    <color name="colorCustomDarkGray">#555555</color>
+    <color name="colorCustomLightGray">#B8B8B8</color>
+
+    <color name="colorSoftCarminePink">#EC453E</color>
+    <color name="colorDarkPink">#F15075</color>
+    <color name="colorLipstick">#C00658</color>
+    <color name="colorCabaret">#E63F6F</color>
+    <color name="colorVoiletBlue">#B351A7</color>
+    <color name="colorSoftPurple">#A97EE1</color>
+    <color name="colorSplashNeonCarrot">#FDA33E</color>
+    <color name="colorSundown">#F8A7B9</color>
+
+    <color name="radio_button_selected_color">#F15075</color>
+    <color name="radio_button_unselected_color">#fff2f2f2</color>
+
+
+</resources>
